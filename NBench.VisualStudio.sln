@@ -7,8 +7,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{52DBDF21-67E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{93AD35D9-0902-4CB5-B16D-70C25248AE7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBench.VisualStudio.Tests.Unit", "tests\NBench.VisualStudio.Tests.Unit\NBench.VisualStudio.Tests.Unit.csproj", "{0ED3FB0F-65E1-4A5C-BBA0-505B25DB2802}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ED3FB0F-65E1-4A5C-BBA0-505B25DB2802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED3FB0F-65E1-4A5C-BBA0-505B25DB2802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED3FB0F-65E1-4A5C-BBA0-505B25DB2802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED3FB0F-65E1-4A5C-BBA0-505B25DB2802}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0ED3FB0F-65E1-4A5C-BBA0-505B25DB2802} = {93AD35D9-0902-4CB5-B16D-70C25248AE7C}
 	EndGlobalSection
 EndGlobal
