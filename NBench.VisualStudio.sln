@@ -7,12 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{52DBDF21-67E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{93AD35D9-0902-4CB5-B16D-70C25248AE7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBench.VisualStudio.Tests.Unit", "tests\NBench.VisualStudio.Tests.Unit\NBench.VisualStudio.Tests.Unit.csproj", "{3AB1EB4F-D046-485B-8D6D-3089CD75288C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E2099940-3425-43B3-924B-2727869DBFCB}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBench.VisualStudio.TestAdapter.Tests.Unit", "tests\NBench.VisualStudio.TestAdapter.Tests.Unit\NBench.VisualStudio.TestAdapter.Tests.Unit.csproj", "{3AB1EB4F-D046-485B-8D6D-3089CD75288C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBench.VisualStudio.TestAdapter", "src\NBench.VisualStudio.TestAdapter\NBench.VisualStudio.TestAdapter.csproj", "{14CADB1F-53E0-4D9A-9F8B-44810409ACBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,11 +26,16 @@ Global
 		{3AB1EB4F-D046-485B-8D6D-3089CD75288C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AB1EB4F-D046-485B-8D6D-3089CD75288C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AB1EB4F-D046-485B-8D6D-3089CD75288C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14CADB1F-53E0-4D9A-9F8B-44810409ACBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CADB1F-53E0-4D9A-9F8B-44810409ACBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CADB1F-53E0-4D9A-9F8B-44810409ACBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CADB1F-53E0-4D9A-9F8B-44810409ACBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3AB1EB4F-D046-485B-8D6D-3089CD75288C} = {93AD35D9-0902-4CB5-B16D-70C25248AE7C}
+		{14CADB1F-53E0-4D9A-9F8B-44810409ACBF} = {52DBDF21-67E5-46F6-B06D-989601B9279B}
 	EndGlobalSection
 EndGlobal
