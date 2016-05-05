@@ -57,7 +57,7 @@
         [Fact]
         public void TheMessageInTheExceptionDetailsTheFactThatTheDiscoveryContextCannotBeNull()
         {
-            Assert.Equal("The test case discovery sink you have passed in is null. The test case discovery sink must not be null.\r\nParameter name: testCaseDiscoverySink", this.ThrownException.Message);
+            Assert.Equal("The test case discovery sink you have passed in is null. The test case discovery sink must not be null.\r\nParameter name: discoverySink", this.ThrownException.Message);
         }
     }
 }

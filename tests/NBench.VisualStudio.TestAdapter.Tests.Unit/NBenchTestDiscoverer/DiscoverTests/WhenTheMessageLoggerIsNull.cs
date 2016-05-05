@@ -57,7 +57,7 @@
         [Fact]
         public void TheMessageInTheExceptionDetailsTheFactThatTheDiscoveryContextCannotBeNull()
         {
-            Assert.Equal("The message logger you have passed in is null. The message logger must not be null.\r\nParameter name: messageLogger", this.ThrownException.Message);
+            Assert.Equal("The message logger you have passed in is null. The message logger must not be null.\r\nParameter name: logger", this.ThrownException.Message);
         }
     }
 }

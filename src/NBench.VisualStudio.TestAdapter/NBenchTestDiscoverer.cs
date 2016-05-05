@@ -22,6 +22,10 @@ using System.Linq;
             {
                 throw new ArgumentNullException("discoveryContext", "The discovery context you have passed in is null. The discovery context must not be null.");
             }
+            else if (logger == null)
+            {
+                throw new ArgumentNullException("logger", "The message logger you have passed in is null. The message logger must not be null.");
+            }
             throw new NotImplementedException();
         }
     }
