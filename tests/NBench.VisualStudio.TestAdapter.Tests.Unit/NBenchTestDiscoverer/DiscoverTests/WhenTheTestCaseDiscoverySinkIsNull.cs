@@ -38,9 +38,9 @@
         {
             this.RecordAnyExceptionsThrown();
             this.sources = this.Fixture.Create<IEnumerable<string>>();
-            this.discoverycontext = null;
+            this.discoverycontext = this.Fixture.Create<IDiscoveryContext>();
             this.messagelogger = this.Fixture.Create<IMessageLogger>();
-            this.testcasediscoverysink = this.Fixture.Create<ITestCaseDiscoverySink>();
+            this.testcasediscoverysink = null;
         }
 
         protected override void When()

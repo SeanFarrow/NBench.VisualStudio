@@ -38,8 +38,8 @@
         {
             this.RecordAnyExceptionsThrown();
             this.sources = this.Fixture.Create<IEnumerable<string>>();
-            this.discoverycontext = null;
-            this.messagelogger = this.Fixture.Create<IMessageLogger>();
+            this.discoverycontext = this.Fixture.Create<IDiscoveryContext>();
+            this.messagelogger = null;
             this.testcasediscoverysink = this.Fixture.Create<ITestCaseDiscoverySink>();
         }
 
