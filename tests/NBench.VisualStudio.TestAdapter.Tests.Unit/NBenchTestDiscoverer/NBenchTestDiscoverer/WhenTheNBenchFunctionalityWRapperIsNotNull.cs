@@ -27,7 +27,7 @@
 
         protected override void Given()
         {
-            this.functionalitywrapper = null;
+            this.functionalitywrapper = this.Fixture.Create<INBenchFunctionalityWrapper>();
         }
 
         protected override void When()
