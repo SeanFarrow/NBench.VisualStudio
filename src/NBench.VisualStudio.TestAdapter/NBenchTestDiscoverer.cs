@@ -18,7 +18,10 @@ using System.Linq;
             {
                 throw new ArgumentException("The sources collection you have passed in is empty. The source collection must be populated.", "sources");
             }
-                
+            else if (discoveryContext == null)
+            {
+                throw new ArgumentNullException("discoveryContext", "The discovery context you have passed in is null. The discovery context must not be null.");
+            }
             throw new NotImplementedException();
         }
     }
