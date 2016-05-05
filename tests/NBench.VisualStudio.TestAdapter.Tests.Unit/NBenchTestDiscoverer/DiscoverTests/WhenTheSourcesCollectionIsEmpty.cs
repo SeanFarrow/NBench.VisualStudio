@@ -14,6 +14,7 @@
     using Ploeh.AutoFixture.AutoNSubstitute;
 
     using Xunit;
+    using System.Linq;
 
     public class WhenTheSourcesCollectionIsEmpty : XBehaviourTest<NBenchTestDiscoverer>
     {
@@ -36,7 +37,7 @@
         protected override void Given()
         {
             this.RecordAnyExceptionsThrown();
-            this.sources = null;
+            this.sources = Enumerable.Empty<string>();
             this.discoverycontext = this.Fixture.Create<IDiscoveryContext>();
             this.messagelogger = this.Fixture.Create<IMessageLogger>();
             this.testcasediscoverysink = this.Fixture.Create<ITestCaseDiscoverySink>();
