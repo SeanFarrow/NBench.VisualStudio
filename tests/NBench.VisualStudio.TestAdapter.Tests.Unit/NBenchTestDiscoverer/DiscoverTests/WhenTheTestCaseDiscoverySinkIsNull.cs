@@ -15,6 +15,7 @@
 
     using Xunit;
     using System.Linq;
+    using NBench.VisualStudio.TestAdapter.Helpers;
 
     public class WhenTheTestCaseDiscoverySinkIsNull : XBehaviourTest<NBenchTestDiscoverer>
     {
@@ -23,6 +24,7 @@
 
         private IMessageLogger messagelogger;
         private ITestCaseDiscoverySink testcasediscoverysink;
+        private INBenchFunctionalityWrapper functionalitywrapper;
 
         protected override void CustomizeAutoFixture(IFixture fixture)
         {
@@ -31,12 +33,13 @@
 
         protected override NBenchTestDiscoverer CreateSystemUnderTest()
         {
-            return new NBenchTestDiscoverer();
+            return new NBenchTestDiscoverer(this.functionalitywrapper);
         }
 
         protected override void Given()
         {
             this.RecordAnyExceptionsThrown();
+            this.functionalitywrapper = this.Fixture.Create<INBenchFunctionalityWrapper>();
             this.sources = this.Fixture.Create<IEnumerable<string>>();
             this.discoverycontext = this.Fixture.Create<IDiscoveryContext>();
             this.messagelogger = this.Fixture.Create<IMessageLogger>();

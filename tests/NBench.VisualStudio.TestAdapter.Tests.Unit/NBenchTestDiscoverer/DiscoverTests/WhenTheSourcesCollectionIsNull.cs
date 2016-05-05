@@ -9,6 +9,7 @@
     using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
 
     using NBench.VisualStudio.TestAdapter;
+    using NBench.VisualStudio.TestAdapter.Helpers;
 
     using Ploeh.AutoFixture;
     using Ploeh.AutoFixture.AutoNSubstitute;
@@ -22,6 +23,7 @@
 
         private IMessageLogger messagelogger;
         private ITestCaseDiscoverySink testcasediscoverysink;
+        private INBenchFunctionalityWrapper functionalitywrapper;
         
         protected override void CustomizeAutoFixture(IFixture fixture)
         {
@@ -30,12 +32,13 @@
 
         protected override NBenchTestDiscoverer CreateSystemUnderTest()
         {
-            return new NBenchTestDiscoverer();
+            return new NBenchTestDiscoverer(this.functionalitywrapper);
         }
 
         protected override void Given()
         {
             this.RecordAnyExceptionsThrown();
+            this.functionalitywrapper = this.Fixture.Create<INBenchFunctionalityWrapper>();
             this.sources = null;
             this.discoverycontext = this.Fixture.Create<IDiscoveryContext>();
             this.messagelogger = this.Fixture.Create<IMessageLogger>();

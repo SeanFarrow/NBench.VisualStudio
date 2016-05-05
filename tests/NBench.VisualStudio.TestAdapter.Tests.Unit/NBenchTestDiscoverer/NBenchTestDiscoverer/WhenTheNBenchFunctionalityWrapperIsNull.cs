@@ -11,6 +11,15 @@ using Xunit;
     public class WhenTheNBenchFunctionalityWrapperIsNull: XBehaviourTest<NBenchTestDiscoverer>
     {
         private INBenchFunctionalityWrapper functionalitywrapper;
+        protected override NBenchTestDiscoverer CreateSystemUnderTest()
+        {
+            return new NBenchTestDiscoverer(this.functionalitywrapper);
+        }
+        protected override void CustomizeAutoFixture(IFixture fixture)
+        {
+            fixture.Customize(new AutoNSubstituteCustomization());
+        }
+        
         protected override void Given()
         {
             this.RecordAnyExceptionsThrown();

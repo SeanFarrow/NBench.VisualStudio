@@ -2,12 +2,19 @@
 {
     using Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter;
     using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
+    using NBench.VisualStudio.TestAdapter.Helpers;
     using System;
     using System.Collections.Generic;
-using System.Linq;
+    using System.Linq;
 
     public class NBenchTestDiscoverer : ITestDiscoverer
     {
+        private INBenchFunctionalityWrapper functionalitywrapper;
+
+        public NBenchTestDiscoverer(INBenchFunctionalityWrapper functionalityWrapper)
+        {
+            }
+        
         public void DiscoverTests(IEnumerable<string> sources, IDiscoveryContext discoveryContext, IMessageLogger logger, ITestCaseDiscoverySink discoverySink)
         {
             if (sources == null)
