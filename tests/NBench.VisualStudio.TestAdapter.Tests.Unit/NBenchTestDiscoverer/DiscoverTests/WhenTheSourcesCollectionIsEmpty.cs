@@ -15,14 +15,14 @@
 
     using Xunit;
 
-    public class WhenTheSourcesCollectionIsNull: XBehaviourTest<NBenchTestDiscoverer>
+    public class WhenTheSourcesCollectionIsEmpty : XBehaviourTest<NBenchTestDiscoverer>
     {
         private IEnumerable<string> sources;
         private IDiscoveryContext discoverycontext;
 
         private IMessageLogger messagelogger;
         private ITestCaseDiscoverySink testcasediscoverysink;
-        
+
         protected override void CustomizeAutoFixture(IFixture fixture)
         {
             fixture.Customize(new AutoNSubstituteCustomization());
@@ -50,13 +50,13 @@
         [Fact]
         public void AnArgumentNullExceptionShouldBeThrown()
         {
-            Assert.IsType<ArgumentNullException>(this.ThrownException);
+            Assert.IsType<ArgumentException>(this.ThrownException);
         }
 
         [Fact]
-        public void TheMessageInTheExceptionDetailsTheFactThatTheSourcesCannotBeNull()
+        public void TheMessageInTheExceptionDetailsTheFactThatTheSourcesCannotBeEmpty()
         {
-            Assert.Equal("The sources collection you have passed in is null. The source collection must be populated.\r\nParameter name: sources", this.ThrownException.Message);
+            Assert.Equal("The sources collection you have passed in is empty. The source collection must be populated.\r\nParameter name: sources", this.ThrownException.Message);
         }
     }
 }
