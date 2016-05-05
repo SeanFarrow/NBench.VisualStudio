@@ -28,11 +28,9 @@ using System.Linq;
             }
             else if (discoverySink == null)
             {
-                throw new ArgumentNullException(
-                    "discoverySink",
-                    "The test case discovery sink you have passed in is null. The test case discovery sink must not be null.");
+                throw new ArgumentNullException("discoverySink", "The test case discovery sink you have passed in is null. The test case discovery sink must not be null.");
             }
-
+            
             throw new NotImplementedException();
         }
     }
