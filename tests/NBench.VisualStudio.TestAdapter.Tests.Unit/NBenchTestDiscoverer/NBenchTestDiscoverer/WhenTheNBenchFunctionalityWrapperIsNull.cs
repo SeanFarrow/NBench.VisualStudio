@@ -39,7 +39,7 @@ using Xunit;
         [Fact]
         public void TheMessageInTheExceptionDetailsTheFactThatTheFunctionalityWrapperCannotBeNull()
         {
-            Assert.Equal("The NBench functionality wrapper you have passed in is null. The NBench functionality wrapper must not be null.\r\nParameter name: functinalityWRapper", this.ThrownException.Message);
+            Assert.Equal("The NBench functionality wrapper you have passed in is null. The NBench functionality wrapper must not be null.\r\nParameter name: functionalityWrapper", this.ThrownException.Message);
         }
     }
 }
