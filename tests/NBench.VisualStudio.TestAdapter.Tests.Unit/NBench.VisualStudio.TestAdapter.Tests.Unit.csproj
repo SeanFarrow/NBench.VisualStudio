@@ -81,12 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\INBenchFunctionalityWrapper.cs" />
     <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheTestCaseDiscoverySinkIsNull.cs" />
     <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheMessageLoggerIsNull.cs" />
     <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheDiscoveryContextIsNull.cs" />
     <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheSourcesCollectionIsEmpty.cs" />
     <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheSourcesCollectionIsNull.cs" />
+    <Compile Include="NBenchTestDiscoverer\NBenchTestDiscoverer\WhenTheNBenchFunctionalityWrapperIsNull.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

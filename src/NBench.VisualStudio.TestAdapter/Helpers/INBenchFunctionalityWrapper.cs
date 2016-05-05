@@ -1,4 +1,4 @@
-﻿namespace NBench.VisualStudio.TestAdapter.Tests.Unit.Helpers
+﻿namespace NBench.VisualStudio.TestAdapter.Helpers
 {
     public interface INBenchFunctionalityWrapper
     {
