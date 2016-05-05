@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheDiscoveryContextIsNull.cs" />
     <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheSourcesCollectionIsEmpty.cs" />
     <Compile Include="NBenchTestDiscoverer\DiscoverTests\WhenTheSourcesCollectionIsNull.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
