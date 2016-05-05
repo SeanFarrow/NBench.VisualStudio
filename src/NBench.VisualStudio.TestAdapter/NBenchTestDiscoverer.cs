@@ -4,6 +4,7 @@
     using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
     using System;
     using System.Collections.Generic;
+using System.Linq;
 
     public class NBenchTestDiscoverer : ITestDiscoverer
     {
@@ -13,6 +14,11 @@
             {
                 throw new ArgumentNullException("sources", "The sources collection you have passed in is null. The source collection must be populated.");
             }
+            else if (!sources.Any())
+            {
+                throw new ArgumentException("The sources collection you have passed in is empty. The source collection must be populated.", "sources");
+            }
+                
             throw new NotImplementedException();
         }
     }
