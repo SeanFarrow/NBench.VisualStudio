@@ -36,7 +36,6 @@ using Xunit;
             Assert.IsType<ArgumentNullException>(this.ThrownException);
         }
 
-        
         [Fact]
         public void TheMessageInTheExceptionDetailsTheFactThatTheFunctionalityWrapperCannotBeNull()
         {

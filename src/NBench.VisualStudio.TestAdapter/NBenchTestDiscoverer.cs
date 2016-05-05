@@ -13,7 +13,11 @@
 
         public NBenchTestDiscoverer(INBenchFunctionalityWrapper functionalityWrapper)
         {
+            if (functionalityWrapper == null)
+            {
+                throw new ArgumentNullException("functionalityWrapper", "The NBench functionality wrapper you have passed in is null. The NBench functionality wrapper must not be null.");
             }
+        }
         
         public void DiscoverTests(IEnumerable<string> sources, IDiscoveryContext discoveryContext, IMessageLogger logger, ITestCaseDiscoverySink discoverySink)
         {
